@@ -1,0 +1,43 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://somewhere#">
+  <rdf:Description rdf:about="http://somewhere/SarahJones">
+    <j.0:N rdf:parseType="Resource">
+      <j.0:Given>Sarah</j.0:Given>
+      <j.0:Family>Jones</j.0:Family>
+    </j.0:N>
+    <j.0:FN>Sarah Jones</j.0:FN>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://somewhere/JohnSmith">
+    <j.0:age>25</j.0:age>
+    <j.0:EMAIL rdf:parseType="Resource">
+      <j.0:type rdf:parseType="Resource">
+        <j.0:value>John@somewhere.com</j.0:value>
+      </j.0:type>
+    </j.0:EMAIL>
+    <j.0:FN>John Smith</j.0:FN>
+    <j.0:N rdf:parseType="Resource">
+      <j.0:Family>Smith</j.0:Family>
+      <j.0:Given>John</j.0:Given>
+    </j.0:N>
+    <j.0:N rdf:parseType="Resource">
+      <j.0:Family>Smith</j.0:Family>
+      <j.0:Given>John</j.0:Given>
+    </j.0:N>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://somewhere/MattJones">
+    <j.0:FN>Matt Jones</j.0:FN>
+    <j.0:N rdf:parseType="Resource">
+      <j.0:Given>Matthew</j.0:Given>
+      <j.0:Family>Jones</j.0:Family>
+    </j.0:N>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://somewhere/RebeccaSmith">
+    <j.0:age>23</j.0:age>
+    <j.0:FN>Becky Smith</j.0:FN>
+    <j.0:N rdf:parseType="Resource">
+      <j.0:Family>Smith</j.0:Family>
+      <j.0:Given>Rebecca</j.0:Given>
+    </j.0:N>
+  </rdf:Description>
+</rdf:RDF>

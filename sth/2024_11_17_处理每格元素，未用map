@@ -1,0 +1,462 @@
+package org.example.Ind_equ.method.ont.impl;
+
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
+
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.vocabulary.OWL;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
+import org.example.Ind_equ.method.ont.IndEquOnt;
+import org.example.ont.impl.OntMethodImpl;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.*;
+
+import org.example.property_method.PropertyLoader;
+import org.example.property_method.impl.PropertyLoaderImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class Ind_equ_ont_impl  extends Ont_method_impl implements Ind_equ_ont{
+    private final Property_loader property_loader = new Property_loader_impl("industrial_equipment.properties");
+    private static final Logger logger = LoggerFactory.getLogger(Ind_equ_ont_impl.class);
+    // 初始化常量
+    private final String ind_equ_url = property_loader.get_key_value("INDUSTRIAL_EQUIPMENT_URL");
+    private final String ont_root = property_loader.get_key_value("ONT_ROOT");
+    private final String datatype = property_loader.get_key_value("DATATYPE");
+
+
+    /**
+    *
+    * 初始化本体模型
+    *
+    **/
+    // 创建初始资源
+    Resource productClass = create_resource("产品", ind_equ_url,OWL.Class);
+    Resource brandClass = create_resource("品牌", ind_equ_url,OWL.Class);
+    Resource companyClass = create_resource("公司或专利方",ind_equ_url,OWL.Class);
+    Resource personClass = create_resource("专利人",ind_equ_url,OWL.Class);
+
+    // 创建初始属性(通用属性)
+    Property brandProperty = create_property("产品的品牌", ind_equ_url);
+    Property productCompanyProperty = create_property("产品的公司或专利方", ind_equ_url);
+    Property brandCompanyProperty = create_property("品牌的公司或专利方", ind_equ_url);
+    Property NameProperty = create_property("名称", ind_equ_url);
+//    Property brandNameProperty = create_property("品牌名称", ind_equ_url);
+//    Property companyNameProperty = create_property("公司或专利方名称", ind_equ_url);
+
+
+
+    public Ind_equ_ont_impl() {
+        init_method();
+    }
+
+    public Ind_equ_ont_impl(Model model) {
+        super(model);
+        init_method();
+    }
+
+    @Override
+    public boolean init_method() {
+        System.out.println("Industrial equipment ontology initialized.");
+//        System.out.println(ind_equ_url);
+
+        /**
+         *
+         * 初始化属性(通用属性)
+         *
+         **/
+        //产品品牌
+        brandProperty.addProperty(RDF.type, OWL.ObjectProperty);
+        brandProperty.addProperty(RDFS.domain, productClass);
+        brandProperty.addProperty(RDFS.range, brandClass);
+        //产品公司/专利方
+        productCompanyProperty.addProperty(RDF.type, OWL.ObjectProperty);
+        productCompanyProperty.addProperty(RDFS.domain, productClass);
+        productCompanyProperty.addProperty(RDFS.range, companyClass);
+        //品牌公司/专利方
+        brandCompanyProperty.addProperty(RDF.type, OWL.ObjectProperty);
+        brandCompanyProperty.addProperty(RDFS.domain, brandClass);
+        brandCompanyProperty.addProperty(RDFS.range, companyClass);
+        //产品名称
+        NameProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        NameProperty.addProperty(RDFS.domain, productClass);
+
+        return false;
+    }
+
+    @Override
+    public boolean read_ont(String ont_filename, String base_url) {
+        return false;
+    }
+
+    @Override
+    public boolean add_ont(String ont_filename, String base_url) {
+        return false;
+    }
+
+    @Override
+    public void write_ont(String ont_filename) {
+
+    }
+
+    @Override
+    public boolean add_ont_from_csv(String filename,String datatype) {
+        if (datatype.equals("production")){
+            add_ont_from_production_csv(filename);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @Override
+    public boolean add_ont_from_datafile(String datafile_name) {
+        if (datafile_name == null || !datafile_name.contains(".")) {
+            logger.error("Invalid file name");
+            return false;
+        }
+
+        // 获取输出文件的类型
+        String type = datafile_name.substring(datafile_name.lastIndexOf(".") + 1);
+
+        // 根据文件扩展名自动推断输出格式
+        try {
+            switch (type) {
+                case "csv":
+                    add_ont_from_csv(datafile_name,datatype);
+                    return true;
+                default:
+                    logger.warn("Unsupported file type");
+                    return false;
+            }
+        } catch (Exception e) {
+            logger.error("Error processing file: {}", e.getMessage(), e);
+            return false;
+        }
+    }
+
+   @Override
+    public boolean add_ont_from_data_dir(String data_dir) {
+        // 验证和清理路径
+        if (data_dir == null || data_dir.isEmpty() || !data_dir.matches("^[a-zA-Z0-9/._-]+$")) {
+            logger.warn("Invalid or empty directory path: " + data_dir);
+            return false;
+        }
+
+        File file = null;		// 获取其file对象并规范化路径
+        try {
+            file = new File(data_dir).getCanonicalFile();
+            File[] fs = file.listFiles();							// 遍历path下的文件和目录，放在File数组中
+            if (fs != null) {										// 检查是否为null
+                for (File f : fs) {								// 遍历File[]数组
+                    boolean isDirectory = f.isDirectory();		// 缓存目录检查结果
+                    if (!isDirectory) {							// 若非目录(即文件)，则打印
+                        add_ont_from_datafile(f.getAbsolutePath());
+//                        System.out.println(f);
+
+                    }
+                }
+            } else {
+                logger.warn("Directory does not exist or cannot be accessed: " + data_dir + ". Directory: " + file);
+                return false;
+            }
+        } catch (IOException e) {
+            logger.error("Error getting canonical file for directory: " + data_dir + ". Directory: " + file, e);
+            throw new RuntimeException(e);
+        } catch (SecurityException e) {
+            logger.error("Security error accessing directory: " + data_dir + ". Directory: " + file, e);
+            return false;
+        } catch (NullPointerException e) {
+            logger.error("Null pointer error accessing directory: " + data_dir + ". Directory: " + file, e);
+            return false;
+        } catch (Exception e) {
+            logger.error("Error listing files in directory: " + data_dir + ". Directory: " + file, e);	// 记录详细日志
+            return false;
+        }
+
+        return true; // 返回一个布尔值表示操作成功
+    }
+
+    @Override
+    public boolean add_ont_from_production_csv(String filename) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(Files.newInputStream(
+                Paths.get(filename)), StandardCharsets.UTF_8))) {
+            // 读取第一行作为列名
+            String firstLine = reader.readLine();
+            if (firstLine == null) throw new IllegalArgumentException("CSV文件为空或格式不正确");
+
+            // 去除 BOM
+            if (firstLine.startsWith("\uFEFF")) firstLine = firstLine.substring(1);
+
+            String[] headers = firstLine.split(",");
+            if (headers == null) throw new IllegalArgumentException("CSV文件为空或格式不正确");
+
+            // 读取剩余行
+            CSVReader csvReader = new CSVReader(reader);
+            String[] nextLine;
+            while ((nextLine = csvReader.readNext()) != null) {
+//                System.out.println("0");
+                //处理每行资源
+                Resource product_resource = null;
+//                Map<String, String> record = new HashMap<>();//
+                //TODO FIXME 先将数据储存到Map中，然后处理，可以实现元素间的关系添加
+                for (int i = 0; i < headers.length; i++) {
+                    String trimmedHeader = headers[i].trim();
+//                    record.put(trimmedHeader, nextLine[i]);
+//                    System.out.println(trimmedHeader + ":  " + nextLine[i]);
+
+                    /**
+                     *
+                     * 产品数据处理
+                     *
+                     **/
+                    switch (trimmedHeader) {
+                        case "产品名称":
+                            System.out.println("\n");
+                            String productNameValue = nextLine[i];
+                            if (productNameValue == null||productNameValue.trim().isEmpty()){
+                                System.out.println("产品名称为空");
+                                continue;
+                            }
+                            product_resource = find_product(productNameValue);
+                            //如果已有该产品
+                            if (product_resource!=null){
+                                System.out.println("已有该产品");
+                                break;
+                            }
+                            String product_posturl = generate_resource_url_hashcode(nextLine[i]);
+                            product_resource = create_resource(product_posturl, ind_equ_url);
+                            add_property(product_resource, NameProperty, productNameValue);
+                            System.out.println("产品名称："+ productNameValue);
+                            break;
+                        case "产品分类":
+//                            System.out.println("3");
+                            String productCategoryValue = nextLine[i];
+                            if (productCategoryValue == null || productCategoryValue.trim().isEmpty()){
+                                System.out.println("产品分类为空");
+                                productCategoryValue = "未分类";
+                            }
+                            Resource product_classification = create_classification_resource(product_resource,productCategoryValue);
+                            product_resource.addProperty(RDF.type, product_classification);
+                            System.out.println("产品分类: " + productCategoryValue);
+                            break;
+                        case "产品品牌":
+                        case "品牌":
+//                            System.out.println("4");
+                            String brandValue = nextLine[i];
+                            if (brandValue == null || brandValue.trim().isEmpty()){
+                                System.out.println("产品品牌为空");
+                                break;
+                            }
+                            //查询是否有该品牌
+                            Resource brand_resource = find_brand(brandValue);
+                            if (brand_resource == null){
+                                brand_resource = create_resource(brandValue, ind_equ_url);
+                                add_property(brand_resource, NameProperty, brandValue);
+                                add_property(brand_resource, RDF.type, brandClass);
+                                //TODO 添加品牌公司
+                            }
+                            add_property(product_resource, brandProperty, brand_resource);
+                            break;
+                        case "产品公司":
+                            String productCompanyValue = nextLine[i];
+                            if (productCompanyValue == null || productCompanyValue.trim().isEmpty()){
+                                System.out.println("产品公司为空");
+                                break;
+                            }
+                            Resource productCompany_resource = find_company(productCompanyValue);
+                            if (productCompany_resource == null){
+                                productCompany_resource = create_resource(productCompanyValue, ind_equ_url);
+                                add_property(productCompany_resource, NameProperty, productCompanyValue);
+                                add_property(productCompany_resource, RDF.type, companyClass);
+                            }
+                            add_property(product_resource, productCompanyProperty, productCompany_resource);
+                        case "产品简介":
+//                            System.out.println("2");
+                            String productIntroValue = nextLine[i];
+                            if (productIntroValue == null||productIntroValue.trim().isEmpty()){
+                                System.out.println("产品简介为空");
+                                productIntroValue = "";
+                            }
+                            Property productIntroProperty = create_property("产品简介", ind_equ_url);
+                            productIntroProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+                            add_property(product_resource, productIntroProperty, productIntroValue);
+                            System.out.println("产品简介："+ productIntroValue);
+                            break;
+                        case "产品图片":
+//                            System.out.println("5");
+                            String productImageValue = nextLine[i];
+                            if (productImageValue == null || productImageValue.trim().isEmpty()){
+                                System.out.println("产品图片为空");
+                                productImageValue = "";
+                            }
+                            Property productImageProperty = create_property("产品图片", ind_equ_url);
+                            productImageProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+                            add_property(product_resource, productImageProperty, productImageValue);
+                            System.out.println("产品图片："+ productImageValue);
+                            break;
+                        case "产品介绍":
+//                            System.out.println("6");
+                            String productIntroductionValue = nextLine[i];
+                            if (productIntroductionValue == null || productIntroductionValue.trim().isEmpty()){
+                                System.out.println("产品介绍为空");
+                                productIntroductionValue = "";
+                            }
+                            Property productIntroductionProperty = create_property("产品介绍", ind_equ_url);
+                            productIntroductionProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+                            add_property(product_resource, productIntroductionProperty, productIntroductionValue);
+                            System.out.println("产品介绍："+ productIntroductionValue);
+                            break;
+                        case "产品链接":
+                            String productLinkValue = nextLine[i];
+                            if (productLinkValue == null || productLinkValue.trim().isEmpty()){
+                                System.out.println("产品链接为空");
+                                productLinkValue = "";
+                            }
+                            Property productLinkProperty = create_property("产品链接", ind_equ_url);
+                            productLinkProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+                            add_property(product_resource, productLinkProperty, productLinkValue);
+                            System.out.println("产品链接："+ productLinkValue);
+                            break;
+                        default:
+                            System.out.println("Unsupported column name: " + trimmedHeader);
+//                            return false;
+                    }
+                }
+            }
+
+            // 如果成功读取并存储数据，返回true
+            return true;
+        } catch (IOException | CsvValidationException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public String generate_resource_url_hashcode(String str) {
+        try {
+            String input = System.currentTimeMillis() + "-" + new Random().nextInt(1000000) + str;
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(input.getBytes());
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : hash) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Resource create_classification_resource(Resource resource, String classifications) {
+        // 提取分类值并去重
+        String[] categories = classifications.split("\\s+");
+        Set<String> uniqueCategories = new LinkedHashSet<>(Arrays.asList(categories));
+
+        // 转换为列表
+        List<String> uniqueCategoryList = new ArrayList<>(uniqueCategories);
+
+        Resource pre_category = productClass;
+        Resource post_category = null;
+
+        for (String category : uniqueCategoryList) {
+            post_category = find_classification(category);
+            if (post_category==null){
+                // 创建分类子类
+                post_category = create_resource(category, ind_equ_url);
+                post_category.addProperty(NameProperty, category);
+                add_subclass_relation(post_category, pre_category);
+            }
+            pre_category = post_category;
+        }
+        //TODO
+
+        return pre_category;
+    }
+
+    @Override
+    public Resource find_product(String product_name) {
+        return find_resource_from_class_by_property_value(productClass, NameProperty, product_name);
+    }
+
+    @Override
+    public Resource find_brand(String brand_name) {
+        return find_resource_from_class_by_property_value(brandClass, NameProperty, brand_name);
+    }
+
+    @Override
+    public Resource find_company(String company_name) {
+        return find_resource_from_class_by_property_value(companyClass, NameProperty, company_name);
+    }
+
+    @Override
+    public Resource find_classification(String classification) {
+        // 获取类和子类的所有实例
+        List<Resource> allSubclasses = findAllSubclasses(model, productClass);
+
+        // 遍历所有类及其子类
+        for (Resource subclass : allSubclasses) {
+                // 获取实例属性的值
+                StmtIterator propertyStatements = model.listStatements(subclass, NameProperty, (RDFNode) null);
+
+                while (propertyStatements.hasNext()) {
+                    Statement statement = propertyStatements.next();
+                    String propertyValue = statement.getObject().asLiteral().getString();
+                    System.out.println(propertyValue);
+
+                    // 检查属性值是否匹配
+                    if (propertyValue.equals(classification)) {
+                        return subclass;
+                    }
+                }
+            }
+        return null;
+    }
+
+    @Override
+    public boolean add_subclass_relation(Resource resourceA, Resource resourceB) {
+        return add_property(resourceA, RDFS.subClassOf, resourceB);
+    }
+
+    @Override
+    public boolean add_brand_relation(Resource resourceA, Resource resourceB) {
+        return add_property(resourceA, brandProperty, resourceB);
+    }
+
+    @Override
+    public boolean add_product_company_relation(Resource resourceA, Resource resourceB) {
+        return add_property(resourceA, productCompanyProperty, resourceB);
+    }
+
+    @Override
+    public boolean add_brand_company_relation(Resource resourceA, Resource resourceB) {
+        return add_property(resourceA, brandCompanyProperty, resourceB);
+    }
+
+
+//    @Override
+//    public List<String> write_person_ont_string(String filename) {
+//        return null;
+//    }
+//
+//    @Override
+//    public void write_stmt_string(Resource object, List<String> strings) {
+//
+//    }
+//
+//    @Override
+//    public void read_person_ont_string_map(String filename) {
+//
+//    }
+}

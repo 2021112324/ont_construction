@@ -1,0 +1,31 @@
+JohnSmith的N包括：(
+Given,其值为John
+Family,其值为Smith
+)
+JohnSmith的N包括：(
+Given,其值为John
+Family,其值为Smith
+)
+RebeccaSmith的N包括：(
+Given,其值为Rebecca
+Family,其值为Smith
+)
+JohnSmith的FN是John Smith
+JohnSmith的EMAIL包括：(
+type包括：(
+value,其值为John@somewhere.com
+)
+)
+RebeccaSmith的FN是Becky Smith
+SarahJones的FN是Sarah Jones
+MattJones的N包括：(
+Family,其值为Jones
+Given,其值为Matthew
+)
+JohnSmith的age是25
+MattJones的FN是Matt Jones
+RebeccaSmith的age是23
+SarahJones的N包括：(
+Family,其值为Jones
+Given,其值为Sarah
+)

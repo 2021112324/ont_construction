@@ -1,0 +1,1221 @@
+<?xml version="1.0" ?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2022/7/元模型#" xml:base="http://www.semanticweb.org/ontologies/2022/7/元模型" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+      <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型"/>
+
+
+
+      <!--
+      ///////////////////////////////////////////////////////////////////////////////////////
+      //
+      // Object Properties
+      //
+      ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#任职-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#任职">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#位于-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#位于">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#地点"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#使用软件-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#使用软件">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#工业软件"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#分支机构-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#分支机构">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#参与-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#参与">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#受理-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#受理">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#处罚-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#处罚">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#执行-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#执行">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#投资-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#投资">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#抵押-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#抵押">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#招标-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#招标">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#拥有专利-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#拥有专利">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#拥有作品-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#拥有作品">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#拥有债券-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#拥有债券">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#拥有网站-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#拥有网站">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#网站"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#拥有许可证-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#拥有许可证">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#拥有证书-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#拥有证书">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#检查-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#检查">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#注册-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#注册">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#生产-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#生产">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#管理-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#管理">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#工业软件"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#股东-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#股东">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#购置-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#购置">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#地点"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#子类-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#子类">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#汽车"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#拥有-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#拥有">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#生产汽车-->
+
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#生产汽车">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#汽车"/>
+      </owl:ObjectProperty>
+
+
+
+      <!--
+      ///////////////////////////////////////////////////////////////////////////////////////
+      //
+      // Data properties
+      //
+      ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#出版情况-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#出版情况">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#创作日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#创作日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#标题-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#标题">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#版权信息-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#版权信息">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#主题/题材-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#主题/题材">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#作者/创作者-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#作者/创作者">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#类型/类别-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#类型/类别">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#URL-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#URL">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#网站"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#描述-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#描述">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#网站"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#网站名称-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#网站名称">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#网站"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#价格-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#价格">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#信用评级-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#信用评级">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#债券类型-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#债券类型">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#到期日-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#到期日">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#发行主体-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#发行主体">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#市场开放程度-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#市场开放程度">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#票面利率-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#票面利率">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#货币政策属性-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#货币政策属性">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#面值-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#面值">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#专利描述-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#专利描述">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#专利权有效期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#专利权有效期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#专利编号-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#专利编号">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#公开日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#公开日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#分类号-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#分类号">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#发明名称-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#发明名称">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#摘要-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#摘要">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#法律状态-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#法律状态">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#申请日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#申请日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#许可状态-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#许可状态">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#发明者/申请人-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#发明者/申请人">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#发证日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#发证日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#持有人-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#持有人">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#状态-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#状态">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#续期信息-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#续期信息">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#许可条件-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#许可条件">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#许可类型-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#许可类型">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#许可范围-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#许可范围">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#许可证有效期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证有效期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#许可证编号-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证编号">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#颁发机构-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#颁发机构">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#发布日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#发布日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#发文机关-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#发文机关">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#失效日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#失效日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#文件标题-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#文件标题">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#文号-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#文号">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#机密等级-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#机密等级">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#生效日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#生效日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#出生日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#出生日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#国籍-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#国籍">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#姓名-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#姓名">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#居住地-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#居住地">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#性别-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#性别">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#教育背景-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#教育背景">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#电话号码-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#电话号码">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#职位-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#职位">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#机构名称-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#机构名称">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#类型/级别-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#类型/级别">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#开始日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#开始日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#结束日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#结束日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#项目名称-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#项目名称">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#项目描述-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#项目描述">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#项目状态-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#项目状态">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#预算-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#预算">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#目标/目的-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#目标/目的">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#项目负责人/团队-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#项目负责人/团队">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#地点名称-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#地点名称">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#地点"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#市-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#市">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#地点"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#省-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#省">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#地点"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#发证机构-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#发证机构">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#持有者-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#持有者">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#证书名称-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#证书名称">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#证书有效期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#证书有效期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#认证标准/规范-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#认证标准/规范">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#证书编号/序列号-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#证书编号/序列号">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#介绍-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#介绍">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#网址-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#网址">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#服务热线-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#服务热线">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#品牌-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#品牌">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#主要产品与服务-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#主要产品与服务">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#企业名称-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#企业名称">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#员工人数-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#员工人数">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#地址-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#地址">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#市场份额-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#市场份额">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#成立日期-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#成立日期">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#注册号码-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#注册号码">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#注册资本-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#注册资本">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#经营范围-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#经营范围">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#联系方式-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#联系方式">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#法人代表/董事-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#法人代表/董事">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#所属行业-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#所属行业">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#信用代码-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#信用代码">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#经营状态-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#经营状态">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#企业类型-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#企业类型">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#组织机构代码-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#组织机构代码">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#登记机关-->
+
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#登记机关">
+            <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+      </owl:DatatypeProperty>
+
+
+
+      <!--
+      ///////////////////////////////////////////////////////////////////////////////////////
+      //
+      // Classes
+      //
+      ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#人-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#人"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#企业-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#企业"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#地点-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#地点"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#工业软件-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#工业软件"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#项目-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#项目"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#政府文件"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#政府机构"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#专利-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#专利"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#作品-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#作品"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#债券-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#债券"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#网站-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#网站"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#许可证-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#许可证"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#证书-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#证书"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#产品-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#产品"/>
+
+
+
+      <!--http://www.semanticweb.org/ontologies/2022/7/元模型#汽车-->
+
+      <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2022/7/元模型#汽车"/>
+</rdf:RDF>
+
+
+
+<!--Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi-->
+

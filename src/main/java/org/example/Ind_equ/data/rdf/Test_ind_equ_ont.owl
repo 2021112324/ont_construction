@@ -1,0 +1,89 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://industrial/equipment/"
+    xmlns:j.1="http://industrial/equipment#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Class rdf:about="http://industrial/equipment/专利人"/>
+  <owl:Class rdf:about="http://industrial/equipment/品牌"/>
+  <owl:Class rdf:about="http://industrial/equipment/公司或专利方"/>
+  <owl:Class rdf:about="http://industrial/equipment/产品"/>
+  <owl:ObjectProperty rdf:about="http://industrial/equipment#应用于">
+    <rdfs:range rdf:resource="http://industrial/equipment/产品"/>
+    <rdfs:domain rdf:resource="http://industrial/equipment/产品"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://industrial/equipment#产品的公司或专利方">
+    <rdfs:range rdf:resource="http://industrial/equipment/公司或专利方"/>
+    <rdfs:domain rdf:resource="http://industrial/equipment/产品"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://industrial/equipment#使用到">
+    <rdfs:range rdf:resource="http://industrial/equipment/产品"/>
+    <rdfs:domain rdf:resource="http://industrial/equipment/产品"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://industrial/equipment#产品的品牌">
+    <rdfs:range rdf:resource="http://industrial/equipment/品牌"/>
+    <rdfs:domain rdf:resource="http://industrial/equipment/产品"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://industrial/equipment#品牌的公司或专利方">
+    <rdfs:range rdf:resource="http://industrial/equipment/公司或专利方"/>
+    <rdfs:domain rdf:resource="http://industrial/equipment/品牌"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://industrial/equipment#产品介绍"/>
+  <owl:DatatypeProperty rdf:about="http://industrial/equipment#名称">
+    <rdfs:domain rdf:resource="http://industrial/equipment/产品"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://industrial/equipment#产品链接"/>
+  <owl:DatatypeProperty rdf:about="http://industrial/equipment#产品图片"/>
+  <owl:DatatypeProperty rdf:about="http://industrial/equipment#产品简介"/>
+  <j.0:嵌入式控制器 rdf:about="http://industrial/equipment/a50eb481fbfad5de8f90018411ef0bada7378cbac2d577711c15201273f6ce7c">
+    <j.1:产品简介>维准电子科技（深圳）有限公司</j.1:产品简介>
+    <j.1:产品的公司或专利方>
+      <j.0:公司或专利方 rdf:about="http://industrial/equipment/维准电子科技（深圳）有限公司">
+        <j.1:名称>维准电子科技（深圳）有限公司</j.1:名称>
+      </j.0:公司或专利方>
+    </j.1:产品的公司或专利方>
+    <j.1:产品的品牌>
+      <j.0:品牌 rdf:about="http://industrial/equipment/APELX维准电子">
+        <j.1:品牌的公司或专利方 rdf:resource="http://industrial/equipment/维准电子科技（深圳）有限公司"/>
+        <j.1:名称>APELX维准电子</j.1:名称>
+      </j.0:品牌>
+    </j.1:产品的品牌>
+    <j.1:产品简介>AEx-2411防爆Box PC通过国际权威防爆认证，搭载Intel 6th Gen. Core i7/i5/i3处理器，采用坚固耐用的SUS 316不锈钢材质，配备IP66等级防护与M12防水连接器</j.1:产品简介>
+    <j.1:产品图片>https://upload.gongkong.com/Upload/gongkong/productInfoImage/202411/05/211de7671265477a842426e6a441b632_w.png</j.1:产品图片>
+    <j.1:产品介绍>AEx-2410防爆Box PC，搭载高效稳定的Intel 6th Gen. Core i7/i5/i3处理器，采用坚固耐用的SUS 316不锈钢材质，专为严苛的工业环境设计，确保在易燃易爆场所中安全运行，展现出卓越的安全性能。其无风扇设计不仅实现了零噪音运行，更避免了因风扇故障引发的安全隐患。配备IP66等级防护与M12防水连接器，有效抵御潮湿、多尘等恶劣环境挑战，确保数据传输的稳定性和设备的长久耐用。支持多种IO应用，可选WLAN功能，满足多样化连接需求的同时，确保数据传输的安全可靠。宽范围直流9~36V电源输入，兼容性强，适应不同工况，减少因电源问题导致的安全风险。支持面板安装和VESA标准安装，灵活便捷，适应各种安装环境。已通过ATEX/IECEx Zone 2、Zone 22和C1D2/C2D2/C3等国际权威防爆认证，每一环节都经过严格测试，确保在危险环境中也能稳定运行，是您工业自动化的安全守护者。
+
+
+
+
+
+产品特点：
+
+● 板载 Intel 6th Gen. Core i7/i5/i3 处理器
+
+● SUS 316不锈钢 防爆Box PC
+
+● 无风扇设计
+
+● IP66等级防护，配备M12防水连接器
+
+● 适用于多种IO应用
+
+● 可选WLAN功能
+
+● 宽范围直流9~36V电源输入
+
+● 支持面板安装和VESA标准安装
+
+● 通过ATEX/IECEx Zone 2、Zone 22和C1D2/C2D2/C3认证</j.1:产品介绍>
+    <j.1:产品链接>https://www.gongkong.com/product/202411/139509.html</j.1:产品链接>
+    <j.1:名称>通过防爆认证Box PC AEx-2411（6th Gen. Core i7/i5/i3）</j.1:名称>
+  </j.0:嵌入式控制器>
+  <rdf:Description rdf:about="http://industrial/equipment/嵌入式系统">
+    <rdfs:subClassOf rdf:resource="http://industrial/equipment/产品"/>
+    <j.1:名称>嵌入式系统</j.1:名称>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://industrial/equipment/嵌入式控制器">
+    <rdfs:subClassOf rdf:resource="http://industrial/equipment/嵌入式系统"/>
+    <j.1:名称>嵌入式控制器</j.1:名称>
+  </rdf:Description>
+</rdf:RDF>
