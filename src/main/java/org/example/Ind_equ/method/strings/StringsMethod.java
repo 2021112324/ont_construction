@@ -41,6 +41,8 @@ public interface StringsMethod {
         cleaned = cleaned.replaceAll("\\s+", "_");
         // 去除或替换特殊字符，保留中文字符
         cleaned = cleaned.replaceAll("[^a-zA-Z0-9_\\-\\u4e00-\\u9fa5]", "");
+        // 清除零格字符
+        cleaned = cleaned.replaceAll("\\u200B", "");
 //         转换为小写（注意：中文字符不会被转换）
 //        cleaned = cleaned.toLowerCase();
         return cleaned;
@@ -61,6 +63,9 @@ public interface StringsMethod {
         cleaned = cleaned.replaceAll("\\s+", "_");
         // 去除可能会造成隐患的特殊字符
         cleaned = cleaned.replaceAll("[!！@#$￥%^&…*()（）{}【】<>《》?？/·、；：‘“’”，。|~`]", "-");
+        // 清除零格字符
+        cleaned = cleaned.replaceAll("\\u200B", "");
+        cleaned = cleaned.replaceAll("﻿","");
 //        cleaned = encodeUri(cleaned);
         // 转换为小写（注意：中文字符不会被转换）
         // cleaned = cleaned.toLowerCase();
@@ -76,6 +81,7 @@ public interface StringsMethod {
     }
 
     static String normalizeToNfc(String input) {
+        input = input.replaceAll("﻿","");
         return Normalizer.normalize(input, Normalizer.Form.NFC);
     }
 

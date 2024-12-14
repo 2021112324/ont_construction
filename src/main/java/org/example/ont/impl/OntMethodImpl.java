@@ -1,10 +1,13 @@
 package org.example.ont.impl;
 
+import org.apache.jena.query.ReadWrite;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
+import org.apache.jena.query.Dataset;
+import org.apache.jena.query.DatasetFactory;
 import org.example.Ind_equ.method.strings.StringsMethod;
 import org.example.ont.OntMethod;
 
@@ -20,12 +23,18 @@ public class OntMethodImpl implements OntMethod {
 //    // 初始化常量
 //    private final String rdf_type = property_loader.get_key_value("RDF_TYPE");
     protected Model model = ModelFactory.createDefaultModel();
+    protected Dataset dataset = DatasetFactory.createTxnMem();
 
     public Model getModel() {
         return model;
     }
 
     public OntMethodImpl() {
+        // 定义命名空间
+        model.setNsPrefix("owl", "http://www.w3.org/2002/07/owl#");
+        model.setNsPrefix("rdf", "http://www.w3.org/2002/07/owl#");
+        model.setNsPrefix("xsd", "http://www.w3.org/2001/XMLSchema#");
+        model.setNsPrefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
     }
 
     public OntMethodImpl(Model model) {
@@ -42,6 +51,27 @@ public class OntMethodImpl implements OntMethod {
         model.read(in, base_url);
         return true;
     }
+
+    @Override
+    public boolean add_ont(String ont_filename, String base_url) {
+        //创建model
+        Model model2 = ModelFactory.createDefaultModel();
+        InputStream in = RDFDataMgr.open(ont_filename);
+        if (in == null){
+            System.out.println("File not found");
+            return false;
+        }
+        model2.read(in, base_url);
+
+        //合并model
+        try {
+            model = model.union(model2);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return true;
+    }
+
      public void write_ont(String ont_filename) {
          // 获取输出文件的类型
          String type = ont_filename.substring(ont_filename.lastIndexOf(".") + 1);
@@ -60,7 +90,7 @@ public class OntMethodImpl implements OntMethod {
              switch (type) {
                  case "rdf":
                  case "owl":
-                     model.write(Files.newOutputStream(file_path), "RDF/XML");
+                     model.write(Files.newOutputStream(file_path), "RDF/XML-ABBREV");
                      break;
                  case "ttl":
                      model.write(Files.newOutputStream(file_path), "Turtle");
@@ -93,25 +123,7 @@ public class OntMethodImpl implements OntMethod {
         model.write(System.out, type);
     }
 
-    @Override
-    public boolean add_ont(String ont_filename, String base_url) {
-        //创建model
-        Model model2 = ModelFactory.createDefaultModel();
-        InputStream in = RDFDataMgr.open(ont_filename);
-        if (in == null){
-            System.out.println("File not found");
-            return false;
-        }
-        model2.read(in, base_url);
 
-        //合并model
-        try {
-            model = model.union(model2);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return true;
-    }
 
     @Override
     public boolean add_ont(Model model2) {
@@ -136,10 +148,22 @@ public class OntMethodImpl implements OntMethod {
 //        }
         //处理分类里的特俗符号
         resource = StringsMethod.weekCleanForOWLIri(resource);
-        String resource_url = String.format("%s/%s", base_url, resource);
+        String resource_url = String.format("%s#%s", base_url, resource);
+        // 清除零格字符
+        resource_url = resource_url.replaceAll("\\u200B", "");
         try {
-            // 异常处理
-                return model.createResource(resource_url);
+            return model.createResource(resource_url);
+//            // 异常处理
+//            Resource tempResource= model.createResource(resource_url);
+//            // 确保模型资源更新
+//            // 提交事务
+//            dataset.begin(ReadWrite.WRITE);
+//            try {
+//                dataset.commit();
+//            } finally {
+//                dataset.end();
+//            }
+//            return tempResource;
         } catch (Exception e) {
             // 处理异常
             throw new RuntimeException("Failed to create resource: " + resource_url, e);
@@ -156,8 +180,9 @@ public class OntMethodImpl implements OntMethod {
 //        if (resource.contains("..") || resource.contains("/") || resource.contains("\\")) {
 //            throw new IllegalArgumentException("Invalid resource path: " + resource);
 //        }
+        resource = StringsMethod.weekCleanForOWLIri(resource);
         // 避免递归调用
-        String resource_url = String.format("%s/%s", base_url, resource);
+        String resource_url = String.format("%s#%s", base_url, resource);
         try {
             // 异常处理
             return type != null ? model.createResource(resource_url, type) : model.createResource(resource_url);
@@ -169,8 +194,14 @@ public class OntMethodImpl implements OntMethod {
 
     @Override
     public Resource get_resource(String resource, String base_url) {
-        String resource_url = String.format("%s/%s", base_url, resource);
-        return model.getResource(resource_url);
+        String resource_url = String.format("%s#%s", base_url, resource);
+        Resource temp_resource = model.getResource(resource_url);
+        if (resource == null || resource.equals("") || !model.containsResource(temp_resource)){
+//            System.out.println(model.containsResource(temp_resource));
+//            System.out.println(temp_resource);
+            return null;
+        }
+        return temp_resource;
     }
 
     @Override
@@ -369,6 +400,7 @@ public class OntMethodImpl implements OntMethod {
             return true;
         }catch (Exception e){
             e.printStackTrace();
+            System.out.println(resource+" "+property+" "+resource2);
             return false;
         }
     }

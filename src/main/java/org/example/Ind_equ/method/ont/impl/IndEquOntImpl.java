@@ -43,6 +43,8 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
     private final String ind_equ_url = property_loader.get_key_value("INDUSTRIAL_EQUIPMENT_URL");
     private final String ont_root = property_loader.get_key_value("ONT_ROOT");
     private final String datatype = property_loader.get_key_value("DATATYPE");
+    private final String model_path = property_loader.get_key_value("MODEL_PATH");
+    private final String model_file = model_path + "初始模型v1.owl";
 
 
     /**
@@ -72,6 +74,8 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
     Property equipProperty = create_property("使用到", ind_equ_url);
     Property appliedToProperty = create_property("应用于", ind_equ_url);
 
+    // 属性：提炼出的属性列表字符串
+    Property extractedListProperty = create_property("提炼出的属性列表", ind_equ_url);
 
 
     public IndEquOntImpl() {
@@ -85,14 +89,24 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
 
     @Override
     public boolean init_method() {
-        System.out.println("Industrial equipment ontology initialized.");
-//        System.out.println(ind_equ_url);
+        System.out.println("Industrial equipment ontology initializing.");
+        /*
+          获取初始化模型
+         */
+        // 判断是否有model_file文件，如果有，则添加模型
+        if (Files.exists(Paths.get(model_file))) {
+            System.out.println("Loading init model exists.");
+            if (!read_ont(model_file, "")){
+                System.out.println("Init model loading failed.");
+            }
+        } else {
+            System.out.println("Init model does not exist.");
+        }
 
-        /**
-         *
-         * 初始化属性(通用属性)
-         *
-         **/
+
+        /*
+          初始化属性(通用属性)
+         */
         //产品品牌
         brandProperty.addProperty(RDF.type, OWL.ObjectProperty);
         brandProperty.addProperty(RDFS.domain, productClass);
@@ -131,7 +145,8 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
 
     @Override
     public boolean read_ont(String ont_filename, String base_url) {
-        return false;
+        ont_filename = ont_root + ont_filename;
+        return super.read_ont(ont_filename, base_url);
     }
 
     @Override
@@ -146,42 +161,6 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
 //    }
 
     @Override
-    public boolean add_ont_from_csv(String filename,String datatype) {
-        if (datatype.equals("production")){
-            add_ont_from_production_csv(filename);
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    @Override
-    public boolean add_ont_from_datafile(String datafile_name) {
-        if (datafile_name == null || !datafile_name.contains(".")) {
-            logger.error("Invalid file name");
-            return false;
-        }
-
-        // 获取输出文件的类型
-        String type = datafile_name.substring(datafile_name.lastIndexOf(".") + 1);
-
-        // 根据文件扩展名自动推断输出格式
-        try {
-            switch (type) {
-                case "csv":
-                    add_ont_from_csv(datafile_name,datatype);
-                    return true;
-                default:
-                    logger.warn("Unsupported file type");
-                    return false;
-            }
-        } catch (Exception e) {
-            logger.error("Error processing file: {}", e.getMessage(), e);
-            return false;
-        }
-    }
-
-   @Override
     public boolean add_ont_from_data_dir(String data_dir) {
         // 验证和清理路径
         if (data_dir == null || data_dir.isEmpty() || !data_dir.matches("^[a-zA-Z0-9/._-]+$")) {
@@ -220,8 +199,44 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
             return false;
         }
         // 记录未翻译的分类
-       translate_method.writeEnglishWord();
+        translate_method.writeEnglishWord();
         return true; // 返回一个布尔值表示操作成功
+    }
+
+    @Override
+    public boolean add_ont_from_datafile(String datafile_name) {
+        if (datafile_name == null || !datafile_name.contains(".")) {
+            logger.error("Invalid file name");
+            return false;
+        }
+
+        // 获取输出文件的类型
+        String type = datafile_name.substring(datafile_name.lastIndexOf(".") + 1);
+
+        // 根据文件扩展名自动推断输出格式
+        try {
+            switch (type) {
+                case "csv":
+                    add_ont_from_csv(datafile_name,datatype);
+                    return true;
+                default:
+                    logger.warn("Unsupported file type");
+                    return false;
+            }
+        } catch (Exception e) {
+            logger.error("Error processing file: {}", e.getMessage(), e);
+            return false;
+        }
+    }
+
+    @Override
+    public boolean add_ont_from_csv(String filename,String datatype) {
+        if (datatype.equals("production")){
+            add_ont_from_production_csv(filename);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override
@@ -261,14 +276,14 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
                  *
                  **/
                 // 产品名称必须首先处理
-                System.out.println("\n");
+//                System.out.println("\n");
                 String productNameValue = record.get("产品名称");
                 if (productNameValue == null||productNameValue.trim().isEmpty()){
                     System.out.println("产品名称为空");
                     continue;
                 }
                 product_resource = find_product(productNameValue);
-                //如果已有该产品
+//                如果已有该产品
                 if (product_resource!=null){
                     System.out.println("已有该产品");
                 }
@@ -303,9 +318,9 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
                             //查询是否有该品牌
                             Resource brand_resource = find_brand(brandValue);
                             if (brand_resource == null){
-                                brand_resource = create_resource(brandValue, ind_equ_url);
+                                brand_resource = create_resource(brandValue, ind_equ_url, brandClass);
                                 add_property(brand_resource, nameProperty, brandValue);
-                                add_property(brand_resource, RDF.type, brandClass);
+//                                add_property(brand_resource, RDF.type, brandClass);
                             }
                             add_property(product_resource, brandProperty, brand_resource);
                             break;
@@ -318,9 +333,9 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
                             }
                             Resource productCompany_resource = find_company(productCompanyValue);
                             if (productCompany_resource == null){
-                                productCompany_resource = create_resource(productCompanyValue, ind_equ_url);
+                                productCompany_resource = create_resource(productCompanyValue, ind_equ_url, companyClass);
                                 add_property(productCompany_resource, nameProperty, productCompanyValue);
-                                add_property(productCompany_resource, RDF.type, companyClass);
+//                                add_property(productCompany_resource, RDF.type, companyClass);
                             }
                             add_property(product_resource, productCompanyProperty, productCompany_resource);
                         case "产品简介":
@@ -443,7 +458,7 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
 
             if (post_category==null){
                 // 创建分类子类
-                post_category = create_resource(category, ind_equ_url);
+                post_category = create_resource(category, ind_equ_url, OWL.Class);
                 post_category.addProperty(nameProperty, category);
                 add_subclass_relation(post_category, pre_category);
             }
@@ -666,6 +681,11 @@ public class IndEquOntImpl extends OntMethodImpl implements IndEquOnt {
         return productNames;
     }
 
+    // 将提炼出来的属性列表转为本体属性
+    @Override
+    public boolean extracted_property(){
+        return false;
+    }
 
 //    @Override
 //    public List<String> write_person_ont_string(String filename) {

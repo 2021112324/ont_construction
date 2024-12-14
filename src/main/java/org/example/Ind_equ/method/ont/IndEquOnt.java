@@ -72,6 +72,9 @@ public interface IndEquOnt extends OntMethod {
 
     List<String> find_all_product_name();
 
+    // 将提炼出来的属性列表转为本体属性
+    boolean extracted_property();
+
 //    public List<String> write_person_ont_string(String filename);
 //
 //    public void write_stmt_string(Resource object, List<String> strings);

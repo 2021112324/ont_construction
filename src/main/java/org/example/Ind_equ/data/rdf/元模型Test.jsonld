@@ -1,0 +1,1861 @@
+{
+  "@graph" : [ {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本",
+    "@type" : "owl:Ontology"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#APC",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#APS",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAD",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAE",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAM",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAPP",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CRM",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#DCS",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#DMS",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#EAM",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#EDA",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#HR",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#LIMS",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#MES",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#MOM",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#MPV",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PDM",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PLC",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PLM",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PMC部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#QMS",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SCADA",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SRM",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SUV",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#URL",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#网站",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#WMS",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#万向传动装置",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#三元催化器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利描述",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利权有效期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利编号",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#业务协同",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#业务部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中冷器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中型半挂车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中型卡车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中型客车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主减速器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主机体组",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主要产品与服务",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主轴承盖",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主题/题材",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#乘用车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#交叉型乘用车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人事部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人员信息",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#HR"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#介绍",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#仪表",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#价格",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#任职",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#仿真产品",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#规划管理类研发设计软件",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#辅助类研发设计软件"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#仿真数据",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#辅助类研发设计软件",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#规划管理类研发设计软件"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业名称",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业类型",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#传动系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#位于",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#地点"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#体系标准化部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作者/创作者",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#使用软件",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工业软件"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#供应商信息",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SRM"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#保洁车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#信息管理类软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#信用代码",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#信用评级",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券类型",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#公开日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#农业用车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#决策支持信息",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#质量管理",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却水管",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液温度传感器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液温度表",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液温度警报灯",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却风扇",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷藏车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮传动比",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮兼容性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮几何形状",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮安装方式",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮尺寸精度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮材料",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮硬度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮表面粗糙度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#出版情况",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#出生日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#分支机构",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#分类号",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#创作日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#到期日",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动操纵机构",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动管路",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动轮缸",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#半挂车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#半轴",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#参与",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机兼容性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机功率输出",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机噪音水平",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机尺寸",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机成本",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机扭矩",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机技术类型",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机排放水平",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机材料",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机燃油效率",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机维护周期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机重量",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发布日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发文机关",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发明名称",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发明者/申请人",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发行主体",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发证日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发证机构",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#受理",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#变速器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#右转向节",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#启动开关",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#启动系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#员工人数",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#品牌",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#品管部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#商用车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#喷油器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#国籍",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#地址",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#地点",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#地点名称",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#地点",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#处罚",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府机构",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#大型客车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#天窗",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#失效日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#姓名",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#子类",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发设计类软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#辅助类研发设计软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车2", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工业软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车3", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#信息管理类软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#半挂车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#物资质量控制类生产管控软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产调度和过程控制类生产管控软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产管控类软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#货车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车4", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#嵌入式软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#客车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#商用车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车1", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#规划管理类研发设计软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#乘用车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#汽车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品" ],
+    "range" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#微型客车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAE", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#MPV", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#消防救援车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#MOM", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#LIMS", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#农业用车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PDM", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#重型卡车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#保洁车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#救护医疗车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车1", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#APS", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#汽罐车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#微型卡车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轻型客车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轻型半挂车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特大型客车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SUV", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#QMS", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#重型半挂车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轻型卡车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PLC", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#乘用车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#APC", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAD", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#辅助类研发设计软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#DCS", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SCADA", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#电视转播车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#油罐车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#交叉型乘用车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAM", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车2", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车4", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#业务协同", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#质量管理", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中型半挂车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#HR", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中型客车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#嵌入式软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产管控类软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#WMS", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#MES", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#EAM", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#信息管理类软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SRM", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#金融运输车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#商用车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#汽车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#EDA", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#大型客车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目管理", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#液罐车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#物资质量控制类生产管控软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PLM", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#运输车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车3", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工程车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发设计类软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#半挂车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中型卡车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#DMS", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CAPP", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#规划管理类研发设计软件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CRM", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#客车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷藏车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#货车", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产调度和过程控制类生产管控软件" ]
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#完工反馈",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#物资质量控制类生产管控软件",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#客车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#居住地",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#嵌入式软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工业软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工程车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工程部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工艺数据",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#规划管理类研发设计软件",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#左转向节",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#差速器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#市",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#地点",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#市场份额",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#市场开放程度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#库存盘点数据",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产调度和过程控制类生产管控软件",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#底盘",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#座椅",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#开始日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#微型卡车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#微型客车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#性别",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#总裁",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#悬架",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#成立日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#所属行业",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#执行",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府机构",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#执行反馈与费用",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目管理"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#技术文件",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#质量管理"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#抵押",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府机构"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#招标",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#拥有专利",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#拥有作品",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#拥有债券",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#拥有网站",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#网站"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#拥有许可证",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#拥有证书",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#持有人",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#持有者",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#掌控",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事会",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#排气管",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#排气系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#排气鼓管",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#描述",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#网站",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴几何尺寸",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴安装方式",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴扭矩传递能力",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴材料",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴表面处理",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴轴承类型",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摘要",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府机构",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#救护医疗车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#教育背景",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#散热器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#文件标题",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#文号",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲柄连杆机构",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲轴",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲轴带轮",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲轴飞轮组",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#服务热线",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机密等级",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机构名称",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油压力开关",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油压力指示灯",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油泵",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油滤清器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#材料领用",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产调度和过程控制类生产管控软件"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#标题",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#梯形臂",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#正时齿轮",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸体",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸垫",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸盖",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸罩",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组传动方式",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组兼容性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组响应速度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组噪音和振动",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组控制精准度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组结构参数",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组耐久性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组调节机制",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门导管",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门弹簧",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门弹簧座",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门挺柱",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门推杆",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门摇臂",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门油封",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门组",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门锁夹",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯兼容性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯几何形状",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯安装方式",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯尺寸精度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯材料",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯硬度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯维护需求",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯耐热性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯耐腐蚀性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯表面粗糙度",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#水泵",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#汽罐车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#汽车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#油压调节",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#油底壳",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#油罐车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#法人代表/董事",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#法律状态",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#注册号码",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#注册资本",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞环",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞连杆组",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞销",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#流程反调",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#业务协同",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#流程执行",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#业务协同"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#消声器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#消防救援车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#涡轮增压器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#润滑系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#液位传感器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#液罐车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油供给系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油分配器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油泵",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油滤清器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油箱",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油蒸汽回收装置",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#版权信息",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#物料信息",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#规划管理类研发设计软件"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#物料需求计划",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#物资质量控制类生产管控软件"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#物资质量控制类生产管控软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特大型客车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车1",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车2",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车3",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#特种车4",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#状态",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产制造中心",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产制造中心下辖",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产制造中心",
+    "range" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#采购部", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产部", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#PMC部" ]
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产汽车",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#汽车"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产管控类软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产调度和过程控制类生产管控软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生效日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府文件",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#申请日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#电气设备",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#电视转播车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#电话号码",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#登记机关",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#监控",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#嵌入式软件",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#目标/目的",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#省",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#地点",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发中心",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发中心下辖",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发中心",
+    "range" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发部", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工程部" ]
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发设计类软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#票面利率",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#离合器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#空气流量传感器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#空气滤清器总成",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#管理",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#总裁", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#工业软件" ],
+    "range" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#销售中心", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#财务部", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#行政体系中心", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#研发中心", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#生产制造中心", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品" ]
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#类型/类别",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#作品",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#类型/级别",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#政府机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事长", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事会成员" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事会"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成主机体组",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#油底壳", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸罩", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸盖", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸垫", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气缸体", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主轴承盖" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主机体组"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成传动系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#离合器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#差速器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#变速器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#半轴", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主减速器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#万向传动装置" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#传动系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成冷却系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液温度表", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#节温器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却水管", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液温度警报灯", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却风扇", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#水泵", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#液位传感器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却液温度传感器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#膨胀水箱", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#散热器" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成制动操纵机构",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动轮缸", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动管路" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动操纵机构"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成制动系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动操纵机构", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动器" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成发动机",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#冷却系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲柄连杆机构", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油供给系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#启动系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#进气系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#润滑系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#排气系统" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成启动系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#起动继电器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#起动机", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#启动开关" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#启动系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成底盘",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#行驶系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#制动系统", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#传动系统" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#底盘"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成排气系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#消声器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#排气鼓管", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#排气管", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#三元催化器" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#排气系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成曲柄连杆机构",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞连杆组", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲轴飞轮组", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#主机体组" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲柄连杆机构"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成曲轴飞轮组",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#飞轮", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#正时齿轮", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲轴带轮", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲轴" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#曲轴飞轮组"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成气门传动组",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门顶杯", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门摇臂", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门推杆", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门挺柱", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#摇臂轴", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴正时齿轮", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#凸轮轴" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成气门组",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门锁夹", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门油封", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门弹簧座", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门弹簧", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门导管", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门组"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成汽车",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车身", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#电气设备", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#底盘", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#发动机" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#汽车"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成活塞连杆组",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#连杆瓦盖", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#连杆瓦", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#连杆", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞销", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞环", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#活塞连杆组"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成润滑系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#集滤器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油滤清器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油泵", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油压力开关" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#润滑系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成润滑系统太挑剔",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#机油压力指示灯",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#润滑系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成燃油供给系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油蒸汽回收装置", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油箱", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油滤清器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油泵", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油分配器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#油压调节", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#喷油器" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#燃油供给系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成行驶系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车轮", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车桥", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车架", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#悬架" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#行驶系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成车身",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车身骨架", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车身钣金件", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车外后视镜", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#座椅", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#天窗", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#仪表" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车身"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成转向传动机构",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向液压泵", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#梯形臂", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向油罐", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#左转向节", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向控制阀", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向节臂", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向动力缸", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向直拉杆", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向摇臂", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向横拉杆", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#右转向节" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向传动机构"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成转向操纵机构",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向轴", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向盘", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向传动轴", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向万向节" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向操纵机构"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成转向系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向操纵机构", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向传动机构" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成进气系统",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#进气鼓管", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#进气管总成", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#节气门总成", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#空气滤清器总成", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#空气流量传感器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#涡轮增压器", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#中冷器" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#进气系统"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组成配气机构",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门组", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#气门传动组" ],
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#组织机构代码",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#经营状态",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#经营范围",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#结束日期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#绩效信息",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#HR",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#续期信息",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#网址",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#产品",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#网站",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#网站名称",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#网站",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#职位",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#联系方式",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#企业",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#膨胀水箱",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#节气门总成",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#节温器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事会",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事会成员",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事长",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#行政体系中心",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#行政体系中心下辖",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#行政体系中心",
+    "range" : [ "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#品管部", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#体系标准化部", "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#人事部" ]
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#行驶系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#规划管理类研发设计软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#认证标准/规范",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可条件",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可状态",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#专利",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可类型",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可范围",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证有效期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证编号",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#设备资产台账维修成本",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#EAM",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书名称",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书有效期",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书编号/序列号",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#证书",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#财务付款",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#SRM",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#财务部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#货币政策属性",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#货车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#质量管理",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#起动机",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#起动继电器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车外后视镜",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车架",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车桥",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车身",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车身钣金件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车身骨架",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#车轮",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向万向节",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向传动机构",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向传动轴",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向动力缸",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向控制阀",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向摇臂",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向操纵机构",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向横拉杆",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向油罐",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向液压泵",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向盘",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向直拉杆",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向节臂",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#转向轴",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轻型半挂车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轻型卡车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轻型客车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车价格",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车保值率",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车内部配置",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车品牌",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车尺寸",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车市场定位",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车年份",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车环保标准",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车维护成本",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车车型",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车颜色",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#轿车",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#辅助类研发设计软件",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#运输车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#进气管总成",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#进气系统",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#进气鼓管",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#连杆",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#连杆瓦",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#连杆瓦盖",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构传动方式",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构凸轮轴位置",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构凸轮轴的布置形式",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构噪音水平",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构气门位置",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构气门间隙",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构相位和定时",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#配气机构",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#采购部",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#重型半挂车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#重型卡车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#金融运输车",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#销售中心",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#销售中心下辖",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#销售中心",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#业务部"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#销售订单",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#CRM",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#集滤器",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#面值",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#债券",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目名称",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目描述",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目状态",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目管理",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目计划",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目管理",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#ERP"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目负责人/团队",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#颁发机构",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#许可证",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#预算",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#项目",
+    "range" : "http://www.w3.org/2001/XMLSchema#"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#领导",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#董事长",
+    "range" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#总裁"
+  }, {
+    "@id" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#飞轮",
+    "@type" : "owl:Class"
+  } ],
+  "@context" : {
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "@vocab" : "http://www.semanticweb.org/ontologies/2022/7/模型2.0版本#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+  }
+}
