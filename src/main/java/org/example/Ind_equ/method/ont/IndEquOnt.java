@@ -1,5 +1,6 @@
 package org.example.Ind_equ.method.ont;
 
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.example.ont.OntMethod;
 
@@ -39,41 +40,61 @@ public interface IndEquOnt extends OntMethod {
     public boolean add_ont_from_production_csv(String filename);
 
 
-    public Resource create_classification_resource(Resource resource,String classifications);
+    Resource processClassification(String classification);
 
-    public Resource find_product(String product_name);
-    public Resource find_brand(String brand_name);
-    public Resource find_company(String company_name);
+    int get_number_of_property_value(Resource resource, Property property);
+
+    String get_value_of_property(Resource resource, Property property);
+
+    boolean generated_attribute(Resource resource);
+
+    String process_python(String python_file, String input);
+
+    boolean generated_relation(Resource resource);
+
+    boolean extracted_all_property();
+
+    boolean generate_all_relation();
+
     public Resource find_classification(String classification);
 
-
     /*
-    *
-    * 添加资源间关系
-    *
-    */
+     *
+     * 添加资源间关系
+     *
+     */
     // 资源A是资源B的子类
     public boolean add_subclass_relation(Resource resourceA, Resource resourceB);
+
+    List<String> find_all_classification();
+
+
+//    public Resource create_classification_resource(Resource resource, String classifications);
+
+//    public Resource find_product(String product_name);
+//    public Resource find_brand(String brand_name);
+//    public Resource find_company(String company_name);
+
+
     // 资源A的品牌是资源B
-    public boolean add_brand_relation(Resource resourceA, Resource resourceB);
+//    public boolean add_brand_relation(Resource resourceA, Resource resourceB);
     // 资源A的产品公司是资源B
-    public boolean add_product_company_relation(Resource resourceA, Resource resourceB);
+//    public boolean add_product_company_relation(Resource resourceA, Resource resourceB);
     // 资源A的品牌公司是资源B
-    public boolean add_brand_company_relation(Resource resourceA, Resource resourceB);
+//    public boolean add_brand_company_relation(Resource resourceA, Resource resourceB);
 
-    boolean add_equip_relation(Resource product, Resource classification);
+//    boolean add_equip_relation(Resource product, Resource classification);
 
-    boolean add_applied_relation(Resource product, Resource classification);
+//    boolean add_applied_relation(Resource product, Resource classification);
 
-    public List<String> find_all_classification();
-    boolean create_equip_relation(Resource product);
+//    public List<String> find_all_classification();
+//    boolean create_equip_relation(Resource product);
 
-    boolean create_all_equip_relation();
+//    boolean create_all_equip_relation();
 
-    List<String> find_all_product_name();
+//    List<String> find_all_product_name();
 
     // 将提炼出来的属性列表转为本体属性
-    boolean extracted_property();
 
 //    public List<String> write_person_ont_string(String filename);
 //

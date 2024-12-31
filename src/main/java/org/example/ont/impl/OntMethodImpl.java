@@ -1,6 +1,5 @@
 package org.example.ont.impl;
 
-import org.apache.jena.query.ReadWrite;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.util.iterator.ExtendedIterator;
@@ -197,8 +196,6 @@ public class OntMethodImpl implements OntMethod {
         String resource_url = String.format("%s#%s", base_url, resource);
         Resource temp_resource = model.getResource(resource_url);
         if (resource == null || resource.equals("") || !model.containsResource(temp_resource)){
-//            System.out.println(model.containsResource(temp_resource));
-//            System.out.println(temp_resource);
             return null;
         }
         return temp_resource;
@@ -292,9 +289,36 @@ public class OntMethodImpl implements OntMethod {
 
     @Override
     public Property get_property(Resource resource, String property, String base_url) {
+        if (resource == null || property == null || property.equals("")){
+            return null;
+        }
         //获取属性
         String property_url = String.format("%s#%s", base_url, property);
-        return model.getProperty(property_url);
+        Property temp_property = model.getProperty(property_url);
+        if (temp_property == null){
+            return null;
+        }
+        if (!model.contains(resource, temp_property)){
+            return null;
+        }
+        return temp_property;
+    }
+
+    @Override
+    public Property get_property_with_range(Resource resource, String property, String base_url) {
+        if (resource == null || property == null || property.equals("")){
+            return null;
+        }
+        //获取属性
+        String property_url = String.format("%s#%s", base_url, property);
+        Property temp_property = model.getProperty(property_url);
+        if (temp_property == null){
+            return null;
+        }
+        if (!model.contains(temp_property, RDFS.domain, resource)){
+            return null;
+        }
+        return temp_property;
     }
 
     @Override

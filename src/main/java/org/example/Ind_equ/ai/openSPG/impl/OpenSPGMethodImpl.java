@@ -11,7 +11,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.example.Ind_equ.ai.openSPG.OpenSPGMethod;
-import org.python.antlr.ast.Str;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -71,7 +70,7 @@ public class OpenSPGMethodImpl implements OpenSPGMethod {
         try {
             // 构建请求体
             JsonObject requestBody = new JsonObject();
-            requestBody.addProperty("model", MODEL_NAME);
+            requestBody.addProperty("indEqu/AI_method/keywords/BERT/model", MODEL_NAME);
             requestBody.addProperty("prompt", prompt);
             requestBody.addProperty("max_tokens", 1024);
             requestBody.addProperty("temperature", 0);

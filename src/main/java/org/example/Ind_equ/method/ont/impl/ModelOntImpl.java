@@ -11,21 +11,15 @@ import org.apache.jena.vocabulary.XSD;
 import org.example.Ind_equ.method.ont.ModelOnt;
 import org.example.Ind_equ.method.strings.StringsMethod;
 import org.example.Ind_equ.method.strings.TranslateMethod;
-import org.example.Ind_equ.method.strings.impl.StringsMethodImpl;
 import org.example.Ind_equ.method.strings.impl.TranslateMethodImpl;
 import org.example.ont.impl.OntMethodImpl;
 import org.example.property_method.PropertyLoader;
 import org.example.property_method.impl.PropertyLoaderImpl;
-import org.python.antlr.ast.Str;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static org.example.Ind_equ.method.strings.StringsMethod.normalizeToNfc;
 
@@ -72,23 +66,27 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
      */
     // ObjectProperty
     // 产品品牌
-    Property productBrandProperty = create_property("产品的品牌", ind_equ_url);
+    Property productBrandProperty = create_property("产品品牌", ind_equ_url);
     // 产品公司/专利方
-    Property productCompanyProperty = create_property("产品的公司或专利方", ind_equ_url);
+    Property productCompanyProperty = create_property("产品公司或专利方", ind_equ_url);
     // 品牌公司/专利方
     Property brandCompanyProperty = create_property("品牌的公司或专利方", ind_equ_url);
     // 产品专利
-    Property productPatentProperty = create_property("产品的专利", ind_equ_url);
+    Property productPatentProperty = create_property("产品专利", ind_equ_url);
     // 专利专利人
-    Property patentPersonProperty = create_property("专利的专利人", ind_equ_url);
+    Property patentPersonProperty = create_property("专利人", ind_equ_url);
     // 专利公司或专利方
-    Property patentCompanyProperty = create_property("专利的公司或专利方", ind_equ_url);
+    Property patentCompanyProperty = create_property("专利公司或专利方", ind_equ_url);
+    // 专利引用
+    Property patentReferenceProperty = create_property("专利引用", ind_equ_url);
+    // 专利应用
+    Property patentApplicationProperty = create_property("专利应用", ind_equ_url);
     // 产品应用领域
-    Property productApplicationDomainProperty = create_property("产品的应用领域", ind_equ_url);
+    Property productApplicationDomainProperty = create_property("产品应用领域", ind_equ_url);
     // 产品的服务行业
-    Property productServiceIndustryProperty = create_property("产品的服务行业", ind_equ_url);
+    Property productServiceIndustryProperty = create_property("产品服务行业", ind_equ_url);
     // 产品制造商
-    Property productManufacturerProperty = create_property("产品的制造商", ind_equ_url);
+    Property productManufacturerProperty = create_property("产品制造商", ind_equ_url);
     // 设备间关系--使用到
     Property equipProperty = create_property("使用到", ind_equ_url);
     // 设备间关系--应用到
@@ -96,10 +94,33 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
 
     // DatatypeProperty
     Property nameProperty = create_property("名称", ind_equ_url);
+    Property productNameProperty = create_property("产品名称", ind_equ_url);
     Property productIntroProperty = create_property("产品简介", ind_equ_url);
     Property productImageProperty = create_property("产品图片", ind_equ_url);
     Property productIntroductionProperty = create_property("产品介绍", ind_equ_url);
     Property productLinkProperty = create_property("产品链接", ind_equ_url);
+    // 专利的专利号
+    Property patentNumberProperty = create_property("专利号", ind_equ_url);
+    // 专利标题
+    Property patentTitleProperty = create_property("专利标题", ind_equ_url);
+    // 专利摘要
+    Property patentAbstractProperty = create_property("专利摘要", ind_equ_url);
+    // 专利声明
+    Property patentClaimProperty = create_property("专利声明", ind_equ_url);
+    // 专利应用事件
+    Property patentEventProperty = create_property("专利事件", ind_equ_url);
+    // 公司名称
+    Property companyNameProperty = create_property("公司名称", ind_equ_url);
+    Property companyAddressProperty = create_property("公司地址", ind_equ_url);
+    Property companyPhoneProperty = create_property("公司电话", ind_equ_url);
+    Property companyWebsiteProperty = create_property("公司网址", ind_equ_url);
+    Property companyIntroductionProperty = create_property("公司介绍", ind_equ_url);
+    Property companyImageProperty = create_property("公司图片", ind_equ_url);
+    Property companyLinkProperty = create_property("公司链接", ind_equ_url);
+    // 品牌名称
+    Property brandNameProperty = create_property("品牌名称", ind_equ_url);
+
+
 
 
 
@@ -164,6 +185,14 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
         patentCompanyProperty.addProperty(RDF.type, OWL.ObjectProperty);
         patentCompanyProperty.addProperty(RDFS.domain, patentClass);
         patentCompanyProperty.addProperty(RDFS.range, companyClass);
+        // 专利引用
+        patentReferenceProperty.addProperty(RDF.type, OWL.ObjectProperty);
+        patentReferenceProperty.addProperty(RDFS.domain, patentClass);
+        patentReferenceProperty.addProperty(RDFS.range, patentClass);
+        // 专利应用
+        patentApplicationProperty.addProperty(RDF.type, OWL.ObjectProperty);
+        patentApplicationProperty.addProperty(RDFS.domain, patentClass);
+        patentApplicationProperty.addProperty(RDFS.range, patentClass);
         // 产品应用领域
         productApplicationDomainProperty.addProperty(RDF.type, OWL.ObjectProperty);
         productApplicationDomainProperty.addProperty(RDFS.domain, productClass);
@@ -207,6 +236,38 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
         productLinkProperty.addProperty(RDF.type, OWL.DatatypeProperty);
         productLinkProperty.addProperty(RDFS.domain, productClass);
         productLinkProperty.addProperty(RDFS.range, XSD.anyURI);
+        // 专利的专利号
+        patentNumberProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        patentNumberProperty.addProperty(RDFS.domain, patentClass);
+        patentNumberProperty.addProperty(RDFS.range, XSD.normalizedString);
+        // 专利标题
+        patentTitleProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        patentTitleProperty.addProperty(RDFS.domain, patentClass);
+        patentTitleProperty.addProperty(RDFS.range, XSD.xstring);
+        // 专利摘要
+        patentAbstractProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        patentAbstractProperty.addProperty(RDFS.domain, patentClass);
+        patentAbstractProperty.addProperty(RDFS.range, XSD.xstring);
+        // 专利声明
+        patentClaimProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        patentClaimProperty.addProperty(RDFS.domain, patentClass);
+        patentClaimProperty.addProperty(RDFS.range, XSD.xstring);
+        // 专利应用事件
+        patentEventProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        patentEventProperty.addProperty(RDFS.domain, patentClass);
+        patentEventProperty.addProperty(RDFS.range, XSD.xstring);
+        // 产品名称
+        productNameProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        productNameProperty.addProperty(RDFS.domain, productClass);
+        productNameProperty.addProperty(RDFS.range, XSD.normalizedString);
+        // 公司名称
+        companyNameProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        companyNameProperty.addProperty(RDFS.domain, companyClass);
+        companyNameProperty.addProperty(RDFS.range, XSD.normalizedString);
+        // 品牌名称
+        brandNameProperty.addProperty(RDF.type, OWL.DatatypeProperty);
+        brandNameProperty.addProperty(RDFS.domain, brandClass);
+        brandNameProperty.addProperty(RDFS.range, XSD.normalizedString);
 
         return false;
     }
@@ -229,7 +290,7 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
 
     @Override
     public void write_ont(String ont_filename) {
-        ont_filename = ont_root + get_file_type(ont_filename) + "/model/" + ont_filename;
+        ont_filename = ont_root + get_file_type(ont_filename) + "/indEqu/AI_method/keywords/BERT/model/" + ont_filename;
         super.write_ont(ont_filename);
     }
 
@@ -245,7 +306,7 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
             return false;
         }
         String type = get_file_type(datafile_name);
-        String file_path = ont_root + type + "/model/" + datafile_name;
+        String file_path = ont_root + type + "/indEqu/AI_method/keywords/BERT/model/" + datafile_name;
         switch (init_ont_case) {
             case 1:
                 if (type.equals("csv")){
@@ -277,7 +338,6 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
                 // 字符串预处理
                 classification = normalizeToNfc(classification.trim());
                 // 对于classification字符串里用空格分隔的分类，获取最后一项
-                // 对于classification字符串里用空格分隔的分类，获取最后一项
                 String[] parts = classification.split(" ");
                 String classificationName = parts[parts.length - 1];
                 Resource classificationResource = null;
@@ -285,14 +345,6 @@ public class ModelOntImpl extends OntMethodImpl implements ModelOnt {
                 if (classificationName.length() != 0) {
                     // 使用String.join重新拼接去掉最后一项的字符串
                     String subClassification = String.join(" ", Arrays.copyOfRange(parts, 0, parts.length - 1)).trim();
-//                    System.out.println(subClassification); // 输出: 机箱机柜 高低压 开关柜
-//                }
-////                String classificationName = classification.split(" ")[classification.split(" ").length - 1];
-////                Resource classificationResource = null;
-//                if (classificationName.length() != 0){
-//                    // 获取classification字符串去除掉classificationName后的字符串
-//                    String subClassification = classification.replace(classificationName, "").trim();
-                    // 创建分类类
                     String classificationUrl = StringsMethod.weekCleanForOWLIri(classification);
                     classificationResource = create_resource(classificationUrl, ind_equ_url, OWL.Class);
                     // 翻译分类名称

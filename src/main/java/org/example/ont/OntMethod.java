@@ -155,6 +155,9 @@ public interface OntMethod {
      * @return 返回一个Property对象，代表所获取的属性
      */
     public Property get_property(Resource resource, String property, String base_url);
+
+    Property get_property_with_range(Resource resource, String property, String base_url);
+
     /**
      * 获取属性名称
      * 如果传入的属性对象为null，则返回null；否则返回属性的本地名称

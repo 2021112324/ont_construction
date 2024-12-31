@@ -10,10 +10,13 @@ import java.util.List;
 
 public class main {
     public static void main(String[] args) {
+        // 测试属性提取
         IndEquOnt ind_equOnt = new IndEquOntImpl();
-        ind_equOnt.add_ont_from_datafile("D:/jena_project1/ontology-construction/src/main/java/org/example/Ind_equ/data/csv/instance/test.csv");
-//        ind_equOnt.add_ont("owl/模型2.0版本.owl", "");
-//        ind_equOnt.write_ont("src/main/java/org/example/Ind_equ/data/rdf/元模型Test.jsonld");
+        ind_equOnt.add_ont_from_datafile("D:/jena_project1/ontology-construction/src/main/java/org/example/Ind_equ/data/csv/instance/PLC.csv");
+////        ind_equOnt.add_ont("owl/模型2.0版本.owl", "");
+//        ind_equOnt.extracted_all_property();
+        ind_equOnt.write_ont("src/main/java/org/example/Ind_equ/data/rdf/PLC.owl");
+        ind_equOnt.write_ont("src/main/java/org/example/Ind_equ/data/rdf/PLC.jsonld");
 
 
 //        //测试本体构建
